@@ -1,0 +1,21 @@
+{
+  "name": "@npfs/scripts",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "tsx seed-data.ts",
+    "create-tables": "tsx create-tables.ts",
+    "setup": "npm run create-tables && npm run seed"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.700.0",
+    "@aws-sdk/lib-dynamodb": "^3.700.0",
+    "csv-parse": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.2"
+  }
+}

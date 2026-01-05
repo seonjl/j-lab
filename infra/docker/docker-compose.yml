@@ -1,0 +1,106 @@
+services:
+  # DynamoDB Local
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    container_name: npfs-dynamodb
+    user: root
+    ports:
+      - "8000:8000"
+    volumes:
+      - dynamodb-data:/home/dynamodblocal/data
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data"
+    healthcheck:
+      test: ["CMD-SHELL", "java -version || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # DynamoDB Admin UI
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin:latest
+    container_name: npfs-dynamodb-admin
+    ports:
+      - "8002:8001"
+    environment:
+      - DYNAMO_ENDPOINT=http://dynamodb:8000
+      - AWS_REGION=ap-northeast-2
+      - AWS_ACCESS_KEY_ID=local
+      - AWS_SECRET_ACCESS_KEY=local
+    depends_on:
+      dynamodb:
+        condition: service_healthy
+
+  # ML API (FastAPI/Python)
+  ml-api:
+    build:
+      context: ../../apps/ml-api
+      dockerfile: Dockerfile
+    container_name: npfs-ml-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../../apps/ml-api:/app
+      - ml-models:/app/models
+    environment:
+      - DYNAMODB_ENDPOINT=http://dynamodb:8000
+      - AWS_REGION=ap-northeast-2
+      - AWS_ACCESS_KEY_ID=local
+      - AWS_SECRET_ACCESS_KEY=local
+    depends_on:
+      dynamodb:
+        condition: service_healthy
+    command: uvicorn main:app --host 0.0.0.0 --port 8080 --reload
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  web:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      # 소스 코드 마운트 (개발 모드)
+      - ../../apps/web/src:/app/apps/web/src
+      - ../../packages:/app/packages
+      # node_modules는 컨테이너 내부 것 사용
+      - /app/node_modules
+      - /app/apps/web/node_modules
+      - /app/packages/core/node_modules
+      - /app/packages/types/node_modules
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - DYNAMODB_ENDPOINT=http://dynamodb:8000
+      - ML_API_URL=http://ml-api:8080
+      - AWS_REGION=ap-northeast-2
+      - AWS_ACCESS_KEY_ID=local
+      - AWS_SECRET_ACCESS_KEY=local
+    depends_on:
+      dynamodb:
+        condition: service_healthy
+      ml-api:
+        condition: service_healthy
+    command: npm run dev
+
+  # 프로덕션 빌드 테스트용
+  web-prod:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile
+      target: runner
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+    profiles:
+      - prod
+
+volumes:
+  dynamodb-data:
+  ml-models:

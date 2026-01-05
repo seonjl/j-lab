@@ -1,0 +1,29 @@
+{
+  "name": "npfs",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "scripts"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "docker:dev": "docker compose -f infra/docker/docker-compose.yml up --build",
+    "docker:down": "docker compose -f infra/docker/docker-compose.yml down",
+    "docker:db": "docker compose -f infra/docker/docker-compose.yml up dynamodb dynamodb-admin -d",
+    "db:create": "npm run create-tables --workspace=@npfs/scripts",
+    "db:seed": "npm run seed --workspace=@npfs/scripts",
+    "db:setup": "npm run db:create && npm run db:seed"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@10.9.0"
+}

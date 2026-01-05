@@ -1,0 +1,57 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+.next
+out
+dist
+.turbo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test
+coverage
+
+# Terraform
+**/.terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# Data (원본 데이터는 버전 관리 제외)
+data/raw/*
+!data/raw/.gitkeep
+
+# Docker
+.docker
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+venv/
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Playwright
+.playwright-mcp/
