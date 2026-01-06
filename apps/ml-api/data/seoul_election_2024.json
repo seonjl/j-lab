@@ -1,0 +1,202 @@
+[
+  {
+    "gu_name": "종로구",
+    "population": 139508,
+    "registered_voters": 126543,
+    "male_voters": 60769,
+    "female_voters": 65774,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "중구",
+    "population": 197663,
+    "registered_voters": 177850,
+    "male_voters": 84455,
+    "female_voters": 93395,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "용산구",
+    "population": 210467,
+    "registered_voters": 189644,
+    "male_voters": 90089,
+    "female_voters": 99555,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "성동구",
+    "population": 200998,
+    "registered_voters": 180828,
+    "male_voters": 88194,
+    "female_voters": 92634,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "광진구",
+    "population": 335229,
+    "registered_voters": 302073,
+    "male_voters": 144017,
+    "female_voters": 158056,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "동대문구",
+    "population": 342021,
+    "registered_voters": 306831,
+    "male_voters": 149566,
+    "female_voters": 157265,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "중랑구",
+    "population": 382152,
+    "registered_voters": 344611,
+    "male_voters": 167823,
+    "female_voters": 176788,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "성북구",
+    "population": 425023,
+    "registered_voters": 374996,
+    "male_voters": 178096,
+    "female_voters": 196900,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "강북구",
+    "population": 286656,
+    "registered_voters": 260860,
+    "male_voters": 125215,
+    "female_voters": 135645,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "도봉구",
+    "population": 306460,
+    "registered_voters": 275314,
+    "male_voters": 132220,
+    "female_voters": 143094,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "노원구",
+    "population": 497406,
+    "registered_voters": 435618,
+    "male_voters": 206539,
+    "female_voters": 229079,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "은평구",
+    "population": 465965,
+    "registered_voters": 414837,
+    "male_voters": 194840,
+    "female_voters": 219997,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "서대문구",
+    "population": 306050,
+    "registered_voters": 272059,
+    "male_voters": 127840,
+    "female_voters": 144219,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "마포구",
+    "population": 363712,
+    "registered_voters": 323277,
+    "male_voters": 149228,
+    "female_voters": 174049,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "양천구",
+    "population": 434706,
+    "registered_voters": 371592,
+    "male_voters": 179316,
+    "female_voters": 192276,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "강서구",
+    "population": 561773,
+    "registered_voters": 498312,
+    "male_voters": 236523,
+    "female_voters": 261789,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "구로구",
+    "population": 391547,
+    "registered_voters": 347358,
+    "male_voters": 169230,
+    "female_voters": 178128,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "금천구",
+    "population": 227264,
+    "registered_voters": 207663,
+    "male_voters": 104306,
+    "female_voters": 103357,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "영등포구",
+    "population": 375073,
+    "registered_voters": 335457,
+    "male_voters": 163270,
+    "female_voters": 172187,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "동작구",
+    "population": 378650,
+    "registered_voters": 339290,
+    "male_voters": 162804,
+    "female_voters": 176486,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "관악구",
+    "population": 482254,
+    "registered_voters": 447641,
+    "male_voters": 224980,
+    "female_voters": 222661,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "서초구",
+    "population": 407930,
+    "registered_voters": 344639,
+    "male_voters": 161890,
+    "female_voters": 182749,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "강남구",
+    "population": 554065,
+    "registered_voters": 469251,
+    "male_voters": 220769,
+    "female_voters": 248482,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "송파구",
+    "population": 653703,
+    "registered_voters": 565072,
+    "male_voters": 268356,
+    "female_voters": 296716,
+    "election_id": "20240410"
+  },
+  {
+    "gu_name": "강동구",
+    "population": 461042,
+    "registered_voters": 398405,
+    "male_voters": 192238,
+    "female_voters": 206167,
+    "election_id": "20240410"
+  }
+]

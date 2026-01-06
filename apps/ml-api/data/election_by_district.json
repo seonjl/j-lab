@@ -1,0 +1,290 @@
+[
+  {
+    "district": "강남구갑",
+    "total_voters": 156085,
+    "total_votes": 95785,
+    "turnout_rate": 0.6137
+  },
+  {
+    "district": "강남구병",
+    "total_voters": 143901,
+    "total_votes": 101634,
+    "turnout_rate": 0.7063
+  },
+  {
+    "district": "강남구을",
+    "total_voters": 168269,
+    "total_votes": 123961,
+    "turnout_rate": 0.7367
+  },
+  {
+    "district": "강동구갑",
+    "total_voters": 199231,
+    "total_votes": 148478,
+    "turnout_rate": 0.7453
+  },
+  {
+    "district": "강동구을",
+    "total_voters": 198766,
+    "total_votes": 134883,
+    "turnout_rate": 0.6786
+  },
+  {
+    "district": "강북구갑",
+    "total_voters": 132265,
+    "total_votes": 84693,
+    "turnout_rate": 0.6403
+  },
+  {
+    "district": "강북구을",
+    "total_voters": 128295,
+    "total_votes": 85587,
+    "turnout_rate": 0.6671
+  },
+  {
+    "district": "강서구갑",
+    "total_voters": 168119,
+    "total_votes": 111747,
+    "turnout_rate": 0.6647
+  },
+  {
+    "district": "강서구병",
+    "total_voters": 158668,
+    "total_votes": 106810,
+    "turnout_rate": 0.6732
+  },
+  {
+    "district": "강서구을",
+    "total_voters": 171060,
+    "total_votes": 117702,
+    "turnout_rate": 0.6881
+  },
+  {
+    "district": "관악구갑",
+    "total_voters": 242617,
+    "total_votes": 160858,
+    "turnout_rate": 0.663
+  },
+  {
+    "district": "관악구을",
+    "total_voters": 204556,
+    "total_votes": 129706,
+    "turnout_rate": 0.6341
+  },
+  {
+    "district": "광진구갑",
+    "total_voters": 150187,
+    "total_votes": 104311,
+    "turnout_rate": 0.6945
+  },
+  {
+    "district": "광진구을",
+    "total_voters": 151508,
+    "total_votes": 105003,
+    "turnout_rate": 0.6931
+  },
+  {
+    "district": "구로구갑",
+    "total_voters": 205069,
+    "total_votes": 145719,
+    "turnout_rate": 0.7106
+  },
+  {
+    "district": "구로구을",
+    "total_voters": 141985,
+    "total_votes": 97999,
+    "turnout_rate": 0.6902
+  },
+  {
+    "district": "금천구",
+    "total_voters": 207518,
+    "total_votes": 135444,
+    "turnout_rate": 0.6527
+  },
+  {
+    "district": "노원구갑",
+    "total_voters": 224187,
+    "total_votes": 158471,
+    "turnout_rate": 0.7069
+  },
+  {
+    "district": "노원구을",
+    "total_voters": 211043,
+    "total_votes": 148121,
+    "turnout_rate": 0.7019
+  },
+  {
+    "district": "도봉구갑",
+    "total_voters": 136836,
+    "total_votes": 95437,
+    "turnout_rate": 0.6975
+  },
+  {
+    "district": "도봉구을",
+    "total_voters": 138197,
+    "total_votes": 96488,
+    "turnout_rate": 0.6982
+  },
+  {
+    "district": "동대문구갑",
+    "total_voters": 151861,
+    "total_votes": 103532,
+    "turnout_rate": 0.6818
+  },
+  {
+    "district": "동대문구을",
+    "total_voters": 154549,
+    "total_votes": 108208,
+    "turnout_rate": 0.7002
+  },
+  {
+    "district": "동작구갑",
+    "total_voters": 180193,
+    "total_votes": 127106,
+    "turnout_rate": 0.7054
+  },
+  {
+    "district": "동작구을",
+    "total_voters": 158571,
+    "total_votes": 117634,
+    "turnout_rate": 0.7418
+  },
+  {
+    "district": "마포구갑",
+    "total_voters": 139968,
+    "total_votes": 101086,
+    "turnout_rate": 0.7222
+  },
+  {
+    "district": "마포구을",
+    "total_voters": 182761,
+    "total_votes": 125262,
+    "turnout_rate": 0.6854
+  },
+  {
+    "district": "서대문구갑",
+    "total_voters": 130042,
+    "total_votes": 89949,
+    "turnout_rate": 0.6917
+  },
+  {
+    "district": "서대문구을",
+    "total_voters": 141489,
+    "total_votes": 100604,
+    "turnout_rate": 0.711
+  },
+  {
+    "district": "서초구갑",
+    "total_voters": 154336,
+    "total_votes": 110606,
+    "turnout_rate": 0.7167
+  },
+  {
+    "district": "서초구을",
+    "total_voters": 189614,
+    "total_votes": 136711,
+    "turnout_rate": 0.721
+  },
+  {
+    "district": "성북구갑",
+    "total_voters": 195813,
+    "total_votes": 135904,
+    "turnout_rate": 0.694
+  },
+  {
+    "district": "성북구을",
+    "total_voters": 178667,
+    "total_votes": 123239,
+    "turnout_rate": 0.6898
+  },
+  {
+    "district": "송파구갑",
+    "total_voters": 151559,
+    "total_votes": 109367,
+    "turnout_rate": 0.7216
+  },
+  {
+    "district": "송파구병",
+    "total_voters": 220956,
+    "total_votes": 159563,
+    "turnout_rate": 0.7221
+  },
+  {
+    "district": "송파구을",
+    "total_voters": 191803,
+    "total_votes": 137090,
+    "turnout_rate": 0.7147
+  },
+  {
+    "district": "양천구갑",
+    "total_voters": 195448,
+    "total_votes": 144597,
+    "turnout_rate": 0.7398
+  },
+  {
+    "district": "양천구을",
+    "total_voters": 175761,
+    "total_votes": 119993,
+    "turnout_rate": 0.6827
+  },
+  {
+    "district": "영등포구갑",
+    "total_voters": 193458,
+    "total_votes": 135823,
+    "turnout_rate": 0.7021
+  },
+  {
+    "district": "영등포구을",
+    "total_voters": 141494,
+    "total_votes": 100141,
+    "turnout_rate": 0.7077
+  },
+  {
+    "district": "용산구",
+    "total_voters": 188998,
+    "total_votes": 130243,
+    "turnout_rate": 0.6891
+  },
+  {
+    "district": "은평구갑",
+    "total_voters": 219044,
+    "total_votes": 149155,
+    "turnout_rate": 0.6809
+  },
+  {
+    "district": "은평구을",
+    "total_voters": 195270,
+    "total_votes": 132329,
+    "turnout_rate": 0.6777
+  },
+  {
+    "district": "종로구",
+    "total_voters": 126041,
+    "total_votes": 88779,
+    "turnout_rate": 0.7044
+  },
+  {
+    "district": "중구성동구갑",
+    "total_voters": 180528,
+    "total_votes": 125695,
+    "turnout_rate": 0.6963
+  },
+  {
+    "district": "중구성동구을",
+    "total_voters": 177422,
+    "total_votes": 123087,
+    "turnout_rate": 0.6938
+  },
+  {
+    "district": "중랑구갑",
+    "total_voters": 156202,
+    "total_votes": 99701,
+    "turnout_rate": 0.6383
+  },
+  {
+    "district": "중랑구을",
+    "total_voters": 188139,
+    "total_votes": 129162,
+    "turnout_rate": 0.6865
+  }
+]

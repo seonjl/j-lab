@@ -13,8 +13,8 @@ router = APIRouter()
 
 # Data files path
 # __file__ = .../npfs/apps/ml-api/routers/voter_reach.py
-# 4 parents up = .../npfs/
-DATA_DIR = Path(__file__).parent.parent.parent.parent / "data" / "processed"
+# For deployment, data is in apps/ml-api/data/
+DATA_DIR = Path(__file__).parent.parent / "data"
 
 
 # =============================================================================

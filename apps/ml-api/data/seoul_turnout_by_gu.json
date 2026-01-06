@@ -1,0 +1,146 @@
+[
+  {
+    "gu_name": "강남구",
+    "total_voters": 468255,
+    "total_votes": 321380,
+    "turnout_rate": 68.63
+  },
+  {
+    "gu_name": "강동구",
+    "total_voters": 397997,
+    "total_votes": 283361,
+    "turnout_rate": 71.2
+  },
+  {
+    "gu_name": "강북구",
+    "total_voters": 260560,
+    "total_votes": 170280,
+    "turnout_rate": 65.35
+  },
+  {
+    "gu_name": "강서구",
+    "total_voters": 497847,
+    "total_votes": 336259,
+    "turnout_rate": 67.54
+  },
+  {
+    "gu_name": "관악구",
+    "total_voters": 447173,
+    "total_votes": 290564,
+    "turnout_rate": 64.98
+  },
+  {
+    "gu_name": "광진구",
+    "total_voters": 301695,
+    "total_votes": 209314,
+    "turnout_rate": 69.38
+  },
+  {
+    "gu_name": "구로구",
+    "total_voters": 347054,
+    "total_votes": 243718,
+    "turnout_rate": 70.22
+  },
+  {
+    "gu_name": "금천구",
+    "total_voters": 207518,
+    "total_votes": 135444,
+    "turnout_rate": 65.27
+  },
+  {
+    "gu_name": "노원구",
+    "total_voters": 435230,
+    "total_votes": 306592,
+    "turnout_rate": 70.44
+  },
+  {
+    "gu_name": "도봉구",
+    "total_voters": 275033,
+    "total_votes": 191925,
+    "turnout_rate": 69.78
+  },
+  {
+    "gu_name": "동대문구",
+    "total_voters": 306410,
+    "total_votes": 211740,
+    "turnout_rate": 69.1
+  },
+  {
+    "gu_name": "동작구",
+    "total_voters": 338764,
+    "total_votes": 244740,
+    "turnout_rate": 72.24
+  },
+  {
+    "gu_name": "마포구",
+    "total_voters": 322729,
+    "total_votes": 226348,
+    "turnout_rate": 70.14
+  },
+  {
+    "gu_name": "서대문구",
+    "total_voters": 271531,
+    "total_votes": 190553,
+    "turnout_rate": 70.18
+  },
+  {
+    "gu_name": "서초구",
+    "total_voters": 343950,
+    "total_votes": 247317,
+    "turnout_rate": 71.9
+  },
+  {
+    "gu_name": "성북구",
+    "total_voters": 374480,
+    "total_votes": 259143,
+    "turnout_rate": 69.2
+  },
+  {
+    "gu_name": "송파구",
+    "total_voters": 564318,
+    "total_votes": 406020,
+    "turnout_rate": 71.95
+  },
+  {
+    "gu_name": "양천구",
+    "total_voters": 371209,
+    "total_votes": 264590,
+    "turnout_rate": 71.28
+  },
+  {
+    "gu_name": "영등포구",
+    "total_voters": 334952,
+    "total_votes": 235964,
+    "turnout_rate": 70.45
+  },
+  {
+    "gu_name": "용산구",
+    "total_voters": 188998,
+    "total_votes": 130243,
+    "turnout_rate": 68.91
+  },
+  {
+    "gu_name": "은평구",
+    "total_voters": 414314,
+    "total_votes": 281484,
+    "turnout_rate": 67.94
+  },
+  {
+    "gu_name": "종로구",
+    "total_voters": 126041,
+    "total_votes": 88779,
+    "turnout_rate": 70.44
+  },
+  {
+    "gu_name": "중구성동구",
+    "total_voters": 357950,
+    "total_votes": 248782,
+    "turnout_rate": 69.5
+  },
+  {
+    "gu_name": "중랑구",
+    "total_voters": 344341,
+    "total_votes": 228863,
+    "turnout_rate": 66.46
+  }
+]
