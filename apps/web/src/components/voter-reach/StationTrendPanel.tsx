@@ -65,10 +65,12 @@ export function StationTrendPanel({ selectedHour, onStationSelect }: StationTren
       return;
     }
 
+    const stationId = selectedStation.id;
+
     async function fetchHourlyData() {
       setIsLoading(true);
       try {
-        const response = await fetch(`/api/voter-reach/ridership?station_id=${selectedStation.id}`);
+        const response = await fetch(`/api/voter-reach/ridership?station_id=${stationId}`);
         if (response.ok) {
           const data = await response.json();
           // Sort by hour
