@@ -13,20 +13,30 @@ import { MonteCarloChart } from '@/components/MonteCarloChart';
 import { GenerationAnalysis } from '@/components/GenerationAnalysis';
 import { runSimulation } from '@/lib/simulation';
 import { defaultScenario, type Scenario } from '@/lib/scenarios';
+import { useLanguage } from '@/lib/i18n';
 
-const TABS = [
-  { id: 'simulation', label: '시뮬레이션', icon: '📊' },
-  { id: 'generation', label: '세대별 분석', icon: '👥' },
-  { id: 'uncertainty', label: '불확실성', icon: '🎲' },
-  { id: 'insight', label: 'ML 인사이트', icon: '🤖' },
+const TABS_KO = [
+  { id: 'simulation', label: '시뮬레이션' },
+  { id: 'generation', label: '세대별 분석' },
+  { id: 'uncertainty', label: '불확실성' },
+  { id: 'insight', label: 'ML 분석' },
+];
+
+const TABS_EN = [
+  { id: 'simulation', label: 'Simulation' },
+  { id: 'generation', label: 'Generational' },
+  { id: 'uncertainty', label: 'Uncertainty' },
+  { id: 'insight', label: 'ML Analysis' },
 ];
 
 export default function PensionSimulatorPage() {
+  const { t, locale } = useLanguage();
   const [params, setParams] = useState<SimulationParams>(defaultScenario.params);
   const [selectedScenarioId, setSelectedScenarioId] = useState<string | null>(defaultScenario.id);
   const [activeTab, setActiveTab] = useState('simulation');
 
   const result = useMemo(() => runSimulation(params), [params]);
+  const tabs = locale === 'ko' ? TABS_KO : TABS_EN;
 
   const handleScenarioSelect = useCallback((scenario: Scenario) => {
     setParams(scenario.params);
@@ -43,22 +53,22 @@ export default function PensionSimulatorPage() {
       {/* Project Header */}
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-            <Link href="/" className="hover:text-gray-700">Home</Link>
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+            <Link href="/" className="hover:text-gray-700">{t.nav.home}</Link>
             <span>/</span>
-            <Link href="/projects" className="hover:text-gray-700">Projects</Link>
+            <Link href="/projects" className="hover:text-gray-700">{t.nav.projects}</Link>
             <span>/</span>
-            <span className="text-gray-900">Pension Simulator</span>
+            <span className="text-gray-900">{t.pension.breadcrumb}</span>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900">
-            국민연금 재정 시뮬레이터
+          <h1 className="text-2xl font-bold text-gray-900">
+            {t.pension.title}
           </h1>
-          <p className="mt-2 text-gray-600">
-            보험료율, 소득대체율 등을 조정하여 기금 고갈 시점을 시뮬레이션합니다
+          <p className="mt-1 text-gray-600 text-sm">
+            {t.pension.description}
           </p>
-          <div className="flex flex-wrap gap-2 mt-4">
-            {['Python', 'FastAPI', 'Next.js', 'ML', 'Monte Carlo', 'K-means'].map((tag) => (
-              <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+          <div className="flex flex-wrap gap-2 mt-3">
+            {['Python', 'FastAPI', 'Next.js', 'scikit-learn', 'Monte Carlo', 'K-means'].map((tag) => (
+              <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
                 {tag}
               </span>
             ))}
@@ -67,9 +77,9 @@ export default function PensionSimulatorPage() {
       </div>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-6">
         <div className="grid gap-6 lg:grid-cols-3">
-          <aside className="lg:col-span-1 space-y-6">
+          <aside className="lg:col-span-1 space-y-4">
             <ScenarioSelector
               selectedId={selectedScenarioId}
               onSelect={handleScenarioSelect}
@@ -79,14 +89,14 @@ export default function PensionSimulatorPage() {
 
           <section className="lg:col-span-2 space-y-4">
             <TabNavigation
-              tabs={TABS}
+              tabs={tabs}
               activeTab={activeTab}
               onChange={setActiveTab}
             />
 
             <div className="min-h-[500px]">
               {activeTab === 'simulation' && (
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <ResultSummary result={result} />
                   <SimulationChart data={result.yearlyResults} />
                 </div>
@@ -107,35 +117,19 @@ export default function PensionSimulatorPage() {
           </section>
         </div>
 
-        {/* Project Info Footer */}
-        <div className="mt-12 pt-6 border-t border-gray-200">
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">About This Project</h3>
-            <div className="prose prose-sm text-gray-600">
-              <p>
-                본 시뮬레이터는 국민연금 재정 분석을 위한 도구입니다.
-                Python 기반 ML API (FastAPI)와 Next.js 프론트엔드로 구성되어 있습니다.
-              </p>
-              <h4 className="text-md font-medium text-gray-800 mt-4 mb-2">주요 기능</h4>
-              <ul className="list-disc pl-5 space-y-1">
-                <li><strong>시뮬레이션</strong>: 정책 변수 조정에 따른 기금 잔액 변화 예측</li>
-                <li><strong>세대별 분석</strong>: K-means 클러스터링을 통한 세대간 형평성 분석</li>
-                <li><strong>불확실성</strong>: Monte Carlo 시뮬레이션으로 기금수익률 변동성 반영</li>
-                <li><strong>ML 인사이트</strong>: Gradient Boosting 모델 기반 변수 중요도 분석</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <footer className="mt-8 text-center text-sm text-gray-500">
+        {/* Disclaimer */}
+        <div className="mt-8 text-center text-xs text-gray-500">
           <p>
-            본 시뮬레이터는 교육 및 연구 목적으로 제작되었습니다.
-            실제 국민연금 재정추계와 다를 수 있습니다.
+            {locale === 'ko'
+              ? '본 시뮬레이터는 교육 및 연구 목적으로 제작되었습니다. 실제 국민연금 재정추계와 다를 수 있습니다.'
+              : 'This simulator is for educational and research purposes. Results may differ from actual NPS projections.'}
           </p>
           <p className="mt-1">
-            데이터 출처: 통계청 장래인구추계(2022), 국민연금 제5차 재정계산(2023)
+            {locale === 'ko'
+              ? '데이터 출처: 통계청 장래인구추계(2022), 국민연금 제5차 재정계산(2023)'
+              : 'Data source: Statistics Korea Population Projection (2022), 5th NPS Actuarial Valuation (2023)'}
           </p>
-        </footer>
+        </div>
       </main>
     </div>
   );

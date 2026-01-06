@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { LanguageProvider } from '@/lib/i18n';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Policy Lab | Public Policy & Data Science',
-  description: 'Evidence-based policy research combining data science and machine learning for public policy analysis.',
+  title: 'Policy Research Lab',
+  description: 'Public Policy & Data Science Research',
 };
 
 export default function RootLayout({
@@ -15,10 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="min-h-screen flex flex-col bg-white">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="min-h-screen flex flex-col bg-white antialiased">
+        <LanguageProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
