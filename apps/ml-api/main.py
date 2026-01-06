@@ -7,7 +7,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Always available routers
-from routers import health, voter_reach
+from routers import health
+from routers import voter_reach
 
 app = FastAPI(
     title="NPFS ML API",

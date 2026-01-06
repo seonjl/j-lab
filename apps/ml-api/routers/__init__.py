@@ -1,1 +1,2 @@
-from . import health, shap_analysis, monte_carlo, generation, voter_reach
+# Routers are imported individually in main.py
+# to allow optional dependencies (numpy, sklearn, etc.)
